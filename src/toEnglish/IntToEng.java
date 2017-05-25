@@ -41,6 +41,31 @@ public class IntToEng {
 	    	case 9: eng = "ninty"; break;
 	    	
 	    	}
+	    	switch(n%10) {
+	    	case 0: break;
+	    	case 1: eng = "eleven"; break;
+	    	case 2: eng = "twelve"; break;
+	    	case 3: eng = "thirteen"; break;
+	    	case 4: eng = "fourteen"; break;
+	    	case 5: eng = "fifteen"; break;
+	    	case 6: eng = "sixteen"; break;
+	    	case 7: eng = "seventeen"; break;
+	    	case 8: eng = "eighteen"; break;
+	    	case 9: eng = "ninteen"; break;
+	    	}
+	    	switch(n/100) {
+	    	case 0: break;
+	    	case 1: eng = "one hundred"; break;
+	    	case 2: eng = "two hundred"; break;
+	    	case 3: eng = "three hundred"; break;
+	    	case 4: eng = "four hundred"; break;
+	    	case 5: eng = "five hundred"; break;
+	    	case 6: eng = "six hundred"; break;
+	    	case 7: eng = "seven hundred"; break;
+	    	case 8: eng = "eight hundred"; break;
+	    	case 9: eng = "nine hundred"; break;
+	    	}
 	    return eng;
 	    }
+	    
 	}
