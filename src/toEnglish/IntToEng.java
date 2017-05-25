@@ -19,7 +19,10 @@ public class IntToEng {
 				} else if (input / 10 > 1 && input/10 <= 9) {
 				 System.out.println(translateEng2(input) + " "+ translateEng1(input%10) );
 				} else if (input / 10 >= 10 && input/10 <= 100) {
-				 System.out.println(translateEng1(input / 100) + " hundred and "+ translateEng2(input%100) + " " + translateEng1(input%10) );
+				 System.out.println(translateEng1(input / 100) + " hundred "+ translateEng2(input%100) + " " + translateEng1(input%10) );
+				}else if(input / 10 >= 100 && input/10 <= 1000) {
+				System.out.println(translateEng1(input / 1000) + " thousand and " +translateEng1((input-(input/1000)*1000) / 100) + " hundred and "+ translateEng2(input%100) + " " + translateEng1(input%10) );
+				 //System.out.println(translateEng3(input / 100) + " hundred "+ translateEng2(input%100) + " " + translateEng1(input%10) );
 				}
 
 	    }
