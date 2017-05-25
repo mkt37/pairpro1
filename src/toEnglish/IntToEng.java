@@ -28,6 +28,19 @@ public class IntToEng {
 			case 8: eng = "eight"; break;
 			case 9: eng = "nine"; break;
 	    	}
+	    	switch(n/10) {
+	    	case 0: break;
+	    	case 1: eng = "ten"; break;
+	    	case 2: eng = "twenty"; break;
+	    	case 3: eng = "thirty"; break;
+	    	case 4: eng = "forty"; break;
+	    	case 5: eng = "fifty"; break;
+	    	case 6: eng = "sixty"; break;
+	    	case 7: eng = "seventy"; break;
+	    	case 8: eng = "eighty"; break;
+	    	case 9: eng = "ninty"; break;
+	    	
+	    	}
 	    return eng;
 	    }
 	}
