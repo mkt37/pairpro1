@@ -8,13 +8,24 @@ public class IntToEng {
 
 	        Scanner sc = new Scanner(System.in);
 	        int input = sc.nextInt();
-	        translateEng(input);	
-	        System.out.println(translateEng(input));
+	        translateEng1(input);
+	        translateEng2(input);
+	        translateEng3(input);
+	        
+	        if (input / 10 == 0) {
+	        	 System.out.println(translateEng1(input));
+				} else if (input / 10 == 1) {
+				 System.out.println(translateEng3(input));
+				} else if (input / 10 > 1 && input/10 <= 9) {
+				 System.out.println(translateEng2(input) + " "+ translateEng1(input%10) );
+				} else if (input / 10 >= 10 && input/10 <= 100) {
+				 System.out.println(translateEng1(input / 100) + " hundred and "+ translateEng2(input%100) + " " + translateEng1(input%10) );
+				}
 
 	    }
 
 	    // 数値を英訳する変換するメソッド
-	    static String translateEng(int n) {
+	    static String translateEng1(int n) {
 	    	String eng = "";
 	    	switch (n) {
 			case 0: break;
@@ -28,6 +39,10 @@ public class IntToEng {
 			case 8: eng = "eight"; break;
 			case 9: eng = "nine"; break;
 	    	}
+	    	return eng;
+	    }
+	    static String translateEng2(int n) {
+	    	String eng = "";
 	    	switch(n/10) {
 	    	case 0: break;
 	    	case 1: eng = "ten"; break;
@@ -39,8 +54,11 @@ public class IntToEng {
 	    	case 7: eng = "seventy"; break;
 	    	case 8: eng = "eighty"; break;
 	    	case 9: eng = "ninty"; break;
-	    	
 	    	}
+	    	return eng;
+	    }
+	    static String translateEng3(int n) {
+	    	String eng = "";
 	    	switch(n%10) {
 	    	case 0: break;
 	    	case 1: eng = "eleven"; break;
@@ -53,19 +71,7 @@ public class IntToEng {
 	    	case 8: eng = "eighteen"; break;
 	    	case 9: eng = "ninteen"; break;
 	    	}
-	    	switch(n/100) {
-	    	case 0: break;
-	    	case 1: eng = "one hundred"; break;
-	    	case 2: eng = "two hundred"; break;
-	    	case 3: eng = "three hundred"; break;
-	    	case 4: eng = "four hundred"; break;
-	    	case 5: eng = "five hundred"; break;
-	    	case 6: eng = "six hundred"; break;
-	    	case 7: eng = "seven hundred"; break;
-	    	case 8: eng = "eight hundred"; break;
-	    	case 9: eng = "nine hundred"; break;
-	    	}
-	    return eng;
+	    	return eng;
 	    }
 	    
 	}
